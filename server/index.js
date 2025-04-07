@@ -20,6 +20,10 @@ app.use(bodyParser.json());
 
 const PORT=process.env.PORT || 5000;
 
+app.get("/",(req,res)=>{
+    return res.status(200).json({message:"Hello from Server"});
+})
+
 const Email_Socket_Mapping=new Map();
 const Socket_Email_Mapping=new Map();
 const Room_Count = new Map(); 
